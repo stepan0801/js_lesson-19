@@ -1,0 +1,169 @@
+.cards{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.card{
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 10px;
+	
+}
+.card:active{
+	border: 2px solid green;
+}
+.card .card__image:hover{
+	transform: scale(1.4);
+	transition: transform 0.5s ease;
+}
+.card__label{
+	display: inline-block;
+	background-color: orangered;
+	color: rgb(218, 206, 186);
+	font-weight: 900;
+	border-radius: 10px;
+	padding: 5px;
+	text-align: center;
+	width: 50%;
+	margin: 10px;
+}
+.card:nth-child(3) .card__label{
+	background-color: red;
+}
+.card__image{
+	width: 100%;
+}
+.card__link{
+	color: rgb(69, 65, 65);
+	text-decoration: none;
+}
+.card__link:hover {
+	color: rgb(171, 161, 161);
+	text-decoration: underline;
+}
+.card__price{
+	color: orangered;
+	font-size: 25px;
+	font-weight: 700;
+}
+/* ===========================================Задача 2=================================== */
+
+.list{
+	display: flex;
+	background-color: rgb(0, 26, 255);
+	justify-content: center;
+}
+.list__all-sportsmen,.list__competition-sportsmen{
+	width: 200px;
+}
+.list__sportsman{
+list-style: none;
+font-size: 25px;
+border: 2px solid black;
+padding: 5px;
+background-color: gray;
+color: aqua;
+}
+.list__image{
+	width: 25px;
+	height: 25px;
+	padding-left: 45px;
+	/* padding-top: 15px; */
+}
+.list__image:hover{
+	transform: scale(1.2);
+}
+
+/* ===========================================Задача 3=================================== */
+
+.let-it-snow{
+	position: relative;
+	background-color: blue;
+	padding-bottom: 30%;
+}
+.let-it-snow__snowflake{
+	position: absolute;
+	top: -100px;
+	width: 20px;
+	height: 20px;
+	visibility: hidden; 
+}
+@keyframes snowFlake{
+	0%{
+		top: 0;
+		visibility: visible;
+	}
+	100%{
+		top: 96%;
+		visibility: hidden;
+	}
+}
+
+/* ===========================================Задача 4=================================== */
+.stars{
+	position: relative;
+	background-color: blue;
+	padding: 30px 30px 30% 30px;
+}
+.stars__item{
+	position: absolute;
+	width: 35px;
+	height: 35px;
+}
+@keyframes star {
+	0% {
+		transform: scale(1.6);
+	}
+	33% {
+		transform: scale(2.2);
+	}
+	66% {
+		transform: scale(2.8);
+	}
+	100% {
+		transform: scale(3.4);
+	}
+	
+}
+/* ===========================================Задача 5=================================== */
+
+.bayraktar{
+	position: relative;
+	padding: 30px 30px 30% 30px;
+}
+.bayraktar__tank{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: -100px;
+	visibility: hidden;
+}
+@keyframes tank {
+	0% {
+		top: 0;
+		visibility: visible;
+	}
+
+	100% {
+		top: 96%;
+		visibility: hidden;
+	}
+}
+.bayraktar__boom{
+	width: 100px;
+	height: 100px;
+	animation-name: boom;
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+}
+@keyframes boom{
+	10% {
+			transform: scale(1.1);
+		}
+	
+		100% {
+			transform: scale(3.5);
+		}
+}
